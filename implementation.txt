@@ -1,0 +1,71 @@
+:: ==========================================
+:: DEEPFAKE KYC - COMPLETE WINDOWS SETUP
+:: ==========================================
+
+:: 1. Clone the project
+git clone https://github.com/YOUR_USERNAME/deepfake-kyc-futuristic.git
+
+:: 2. Enter project
+cd deepfake-kyc-futuristic
+
+:: ==========================================
+:: BACKEND SETUP
+:: ==========================================
+
+cd backend
+
+:: 3. Create Python 3.12 virtual environment
+py -3.12 -m venv venv
+
+:: 4. Activate virtual environment
+venv\Scripts\activate
+
+:: 5. Upgrade pip
+python -m pip install --upgrade pip
+
+:: 6. Install backend dependencies
+pip install -r requirements.txt
+
+:: 7. Create storage folders if required
+mkdir storage
+mkdir storage\uploads
+mkdir storage\videos
+mkdir storage\documents
+mkdir storage\temp
+
+:: 8. Start backend
+python -m uvicorn app.main:app --reload
+
+
+:: ==========================================
+:: FRONTEND SETUP
+:: ==========================================
+:: Open a NEW terminal before running below commands
+
+cd /d D:\path\to\deepfake-kyc-futuristic\frontend
+
+:: 9. Install frontend dependencies
+npm install
+
+:: 10. Start frontend
+npm run dev
+
+
+:: ==========================================
+:: APPLICATION
+:: ==========================================
+
+:: Frontend
+http://localhost:5173
+
+:: Backend
+http://127.0.0.1:8000
+
+:: FastAPI Documentation
+http://127.0.0.1:8000/docs
+
+:: Health Check
+http://127.0.0.1:8000/api/system/health
+
+:: SQLite Database
+backend\storage\kyc.db
