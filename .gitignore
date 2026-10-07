@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+
+# Virtual environments
+venv/
+backend/venv/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# SQLite database - DO NOT upload personal KYC data
+*.db
+*.sqlite
+*.sqlite3
+backend/storage/*.db
+backend/storage/*.sqlite*
+
+# KYC uploads / personal data
+backend/storage/uploads/
+backend/storage/videos/
+backend/storage/documents/
+backend/storage/temp/
+
+# Logs
+*.log
+
+# Node
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
+# Build / cache
+.vite/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
